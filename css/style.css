@@ -12,18 +12,21 @@
   --footer-contacts: rgba(255, 255, 255, 0.6);
   --footer-logo-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   --hero-button-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  --project-cards-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
-    0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-  --project-button-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
-    0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-  --team-item-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
-    0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  --project-cards-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+  --project-button-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  --team-item-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-img{
+img {
   display: block;
 }
-
+svg {
+  padding: 0;
+  border: none;
+}
 /* ------Hide Headers------ */
 
 .hiding-heading {
@@ -42,7 +45,7 @@ img{
 /* ------End Hide Headers------ */
 
 body {
-  font-family: "Roboto", "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: 'Roboto', 'Open Sans', 'Helvetica Neue', sans-serif;
   color: var(--common-color);
   background-color: var(--white);
   margin: 0;
@@ -58,24 +61,24 @@ body {
   text-decoration: none;
 }
 
-.container{
+.container {
   max-width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-  box-sizing: border-box
+  box-sizing: border-box;
 }
 
 /* ------Header Section------ */
-.header{
+.header {
   border-bottom: 1px solid var(--header-underline);
 }
-.header-block{
+.header-block {
   display: flex;
   align-items: center;
 }
 
-.nav-area{
+.nav-area {
   display: flex;
   align-items: center;
 }
@@ -97,7 +100,7 @@ body {
 .ftr-logo-st {
   color: var(--white);
 }
-.logo-web.link{
+.logo-web.link {
   margin-right: 93px;
 }
 
@@ -140,18 +143,17 @@ body {
 .site-nav .link:focus {
   color: var(--brand-blue-color);
 }
-.nav-item:not(:last-child){
+.nav-item:not(:last-child) {
   margin-right: 50px;
 }
 
-
 /* Header Contacts */
-.mail-phone{
+.mail-phone {
   display: flex;
   align-items: center;
   margin-left: auto;
 }
-.contacts-item:not(:last-child){
+.contacts-item:not(:last-child) {
   margin-right: 50px;
 }
 
@@ -166,12 +168,10 @@ body {
 /* ------End Header Section------ */
 
 /* -----Main Container------ */
-.site-nav{
+.site-nav {
   display: flex;
   align-items: center;
 }
-
-
 
 /* Hero */
 
@@ -195,21 +195,21 @@ body {
 /*Hero end*/
 
 /*Details*/
-.spc-work{
+.spc-work {
   padding-top: 94px;
   padding-bottom: 0;
 }
 
-.description-list{
-display: flex;
+.description-list {
+  display: flex;
 }
-.description-item:not(:last-child){
+.description-item:not(:last-child) {
   margin-right: 30px;
 }
 
-.description-item{
+.description-item {
   max-width: 270px;
-} 
+}
 
 .head-spc-work {
   font-weight: 700;
@@ -233,15 +233,15 @@ display: flex;
 /* Details end*/
 
 /* Sections Service */
-.section{
+.section {
   padding-top: 94px;
   padding-bottom: 94px;
 }
-.service-section .list{
-display: flex;
-align-items: start;
+.service-section .list {
+  display: flex;
+  align-items: start;
 }
-.service-item:not(:last-child){
+.service-item:not(:last-child) {
   margin-right: 30px;
 }
 /* Team Section */
@@ -249,7 +249,7 @@ align-items: start;
 .team-section {
   background-color: var(--background-grey);
 }
-.team-title{
+.team-title {
   margin-top: 0;
   margin-bottom: 50px;
 }
@@ -259,7 +259,7 @@ align-items: start;
   align-items: flex-start;
 }
 
-.team-item{
+.team-item {
   max-width: 270px;
   background-color: var(--white);
   box-shadow: var(--team-item-shadow);
@@ -267,12 +267,12 @@ align-items: start;
   border-bottom-left-radius: 4px;
 }
 
-.team-item:not(:last-child){
+.team-item:not(:last-child) {
   margin-right: 30px;
 }
-.description-team{
-padding-top: 30px;
-padding-bottom: 30px;
+.description-team {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 /* Sections Service */
 
@@ -384,7 +384,7 @@ padding-bottom: 30px;
   box-shadow: var(--project-button-shadow);
 }
 
-.filter-button-list{
+.filter-button-list {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -395,7 +395,7 @@ padding-bottom: 30px;
   margin-right: 8px;
 }
 .filter-btn-item:not(:last-child) {
-margin-right: 8px;
+  margin-right: 8px;
 }
 /* -----End Main Container------ */
 
@@ -414,11 +414,11 @@ margin-right: 8px;
   letter-spacing: 0.03em;
   margin-top: 20px;
 }
-.ftr-list .ftr-item{
-margin-bottom: 9px;
+.ftr-list .ftr-item {
+  margin-bottom: 9px;
 }
 
-a#adr-link{
+a#adr-link {
   color: var(--white);
 }
 
