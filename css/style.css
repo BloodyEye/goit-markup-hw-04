@@ -9,7 +9,11 @@
   --card-border-grey: #eeeeee;
   --header-underline: #ececec;
   --order-btn: #188ce8;
+  --icon-body-grey: #AFB1B8;
+  --hero-background-grey: #c4c4c4;
+  --hero-overlay: rgba(47, 48, 58, 0.4);
   --footer-contacts: rgba(255, 255, 255, 0.6);
+  --footer-soc-icon: rgba(255, 255, 255, 0.1);
   --footer-logo-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   --hero-button-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   --project-cards-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
@@ -165,6 +169,11 @@ body {
 .mail-phone .link:focus {
   color: var(--brand-blue-color);
 }
+
+.header-contact-icon {
+  margin-right: 10px;
+  fill: currentColor;
+}
 /* ------End Header Section------ */
 
 /* -----Main Container------ */
@@ -188,9 +197,13 @@ body {
 }
 
 .hero-background {
-  background-color: var(--background-black);
+  background-image: linear-gradient(var(--hero-overlay), var(--hero-overlay)),
+  url(../img/backgroud.jpg);
   padding-top: 200px;
   padding-bottom: 200px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 /*Hero end*/
 
@@ -211,7 +224,8 @@ body {
   max-width: 270px;
 }
 
-.head-spc-work {
+.head-spc-work,
+.footer-connect {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.143;
@@ -230,6 +244,18 @@ body {
   margin-top: 0;
   margin-bottom: 0;
 }
+.spc-work-icon-block{
+  display: flex;
+  margin-bottom: 30px;
+  height: 120px;
+  background-color: var(--background-grey);
+  border-radius: 4px;
+}
+
+.spc-work-icon-block > .icon{
+  margin: auto;
+}
+
 /* Details end*/
 
 /* Sections Service */
@@ -249,14 +275,16 @@ body {
 .team-section {
   background-color: var(--background-grey);
 }
-.team-title {
+
+/*.team-title {
   margin-top: 0;
   margin-bottom: 50px;
-}
+}*/
 
 .team-section .list {
   display: flex;
   align-items: flex-start;
+  justify-content: center;
 }
 
 .team-item {
@@ -277,7 +305,8 @@ body {
 /* Sections Service */
 
 .service-section .service-title,
-.team-section .team-title {
+.team-section .team-title,
+.customer .service-title {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.167;
@@ -323,12 +352,42 @@ body {
 .team-position {
   line-height: 1.188;
   text-align: center;
+  margin-bottom: 16px;
 }
 
 .project-type {
   line-height: 1.875;
 }
 
+.team-soc-icon,
+.footer-soc-icon {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+.team-soc-icon {
+  background-color: transparent;
+  fill: var(--icon-body-grey);
+}
+
+.team-soc-icon:hover,
+.team-soc-icon:focus,
+.footer-soc-icon:hover,
+.footer-soc-icon:focus {
+  background-color: var(--brand-blue-color);
+  fill: var(--white);
+}
+
+.team-soc-icon > .icon,
+.footer-soc-icon > .icon {
+  margin: auto;
+}
+.team-soc-icon:not(:last-child),
+.footer-soc-item:not(:last-child){
+  margin-right: 10px;
+}
 /* Portfolio Card Effects */
 
 .portfolio-link {
@@ -399,11 +458,40 @@ body {
 }
 /* -----End Main Container------ */
 
+/*-----Customer section-----*/
+.customer .list{
+  display: flex;
+}
+.customer-item:not(:last-child){
+margin-right: 30px;
+}
+.customer-link-item{
+  display: flex;
+  height: 92px;
+  width: 170px;
+  border: 1px solid var(--icon-body-grey);
+  border-radius: 4px;
+  fill: var(--icon-body-grey);
+}
+.customer-link-item:hover,
+.customer-link-item:focus{
+  border-color: var(--brand-blue-color);
+  fill: var(--brand-blue-color);
+}
+.customer-link-item>.icons{
+  margin: auto;
+}
+
+/*----- END Customer section -----*/
+
 /* ------Footer Section------ */
 .footer {
   background-color: var(--background-black);
   padding-top: 60px;
   padding-bottom: 60px;
+}
+.ftr-block{
+  display: flex;
 }
 
 .ftr-adress,
@@ -417,6 +505,18 @@ body {
 .ftr-list .ftr-item {
   margin-bottom: 9px;
 }
+.ftr-logo-adr,
+.social-network,
+.subscribe {
+  display: flex;
+  flex-direction: column;
+}
+
+.ftr-logo-adr,
+.social-network {
+  width: 270px;
+  margin-right: 30px;
+}
 
 a#adr-link {
   color: var(--white);
@@ -429,6 +529,21 @@ a#adr-link {
 
 .ftr-adress .link:hover,
 .ftr-adress .link:focus {
+  color: var(--white);
+}
+.footer-soc-list {
+  display: flex;
+  align-items: flex-start;
+}
+
+.footer-soc-icon {
+  background-color: var(--footer-soc-icon);
+  fill: var(--white);
+}
+
+.footer-connect {
+  padding-top: 12px;
+  margin-bottom: 20px;
   color: var(--white);
 }
 
