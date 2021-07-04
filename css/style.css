@@ -276,10 +276,6 @@ body {
   background-color: var(--background-grey);
 }
 
-/*.team-title {
-  margin-top: 0;
-  margin-bottom: 50px;
-}*/
 
 .team-section .list {
   display: flex;
@@ -297,6 +293,9 @@ body {
 
 .team-item:not(:last-child) {
   margin-right: 30px;
+}
+.team-soc-item:not(:last-child) {
+  margin-right: 10px;
 }
 .description-team {
   padding-top: 30px;
